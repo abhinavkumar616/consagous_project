@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "dc190073-6a3d-421d-b067-1e2f067b8ef7",
+		"name": "consagous",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8247744"
+	},
+	"item": [
+		{
+			"name": "user_register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"alex\",\r\n    \"email\":\"alex@gmail.com\",\r\n    \"password\":\"sharma\",\r\n    \"role\":\"Admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"alex@gmail.com\",\r\n    \"password\":\"sharma\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "projects",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjMyNzczNzMsInVzZXIiOnsiX2lkIjoiNjZiNzA2OWNmNjBjOTU0NDE5YjVhMmY3IiwibmFtZSI6ImFsZXgiLCJlbWFpbCI6ImFsZXhAZ21haWwuY29tIiwicGFzc3dvcmQiOiJzaGFybWEiLCJyb2xlIjoiQWRtaW4iLCJfX3YiOjB9LCJpYXQiOjE3MjMyNzM3NzN9.hUjTS6qqF7iSJabqinRzJtsZgLJ9u7YyZyBLOu1RwrE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"hello abhinav\",\r\n    \"description\":\"hello abhinav Projects\",\r\n    \"created_by\":\"Abhinav\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/projects",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_projects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/projects",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "projects/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/projects/66b711731f8630ad54a8fa53",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"projects",
+						"66b711731f8630ad54a8fa53"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Project/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjMyNzczNzMsInVzZXIiOnsiX2lkIjoiNjZiNzA2OWNmNjBjOTU0NDE5YjVhMmY3IiwibmFtZSI6ImFsZXgiLCJlbWFpbCI6ImFsZXhAZ21haWwuY29tIiwicGFzc3dvcmQiOiJzaGFybWEiLCJyb2xlIjoiQWRtaW4iLCJfX3YiOjB9LCJpYXQiOjE3MjMyNzM3NzN9.hUjTS6qqF7iSJabqinRzJtsZgLJ9u7YyZyBLOu1RwrE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"updated nameiiiiiiiiiiiii\",\r\n    \"description\":\"updateds descriptions\",\r\n    \"created_by\":\"Asw\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/projects/66b71e2c20bd1ef99dce0949",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"projects",
+						"66b71e2c20bd1ef99dce0949"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "projects/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjMyNzk1MTcsInVzZXIiOnsiX2lkIjoiNjZiNzA2OWNmNjBjOTU0NDE5YjVhMmY3IiwibmFtZSI6ImFsZXgiLCJlbWFpbCI6ImFsZXhAZ21haWwuY29tIiwicGFzc3dvcmQiOiJzaGFybWEiLCJyb2xlIjoiQWRtaW4iLCJfX3YiOjB9LCJpYXQiOjE3MjMyNzU5MTd9.hkSTglrvhNEzBPHe9WoZ16URNHIg-VOSaLu7uOF6CK4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/projects/66b7124f789b35b21668d1f3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"projects",
+						"66b7124f789b35b21668d1f3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "projects/:projectId/tasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"kumar\",\r\n    \"description\": \"hello\",\r\n    \"assigned_to\": \"kumar\",\r\n    \"status\": \"Done\",\r\n    \"project_reference\": \"hello\",\r\n    \"due_date\":\"13/10/24\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/projects/66b71e2c20bd1ef99dce0949/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"projects",
+						"66b71e2c20bd1ef99dce0949",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/projects/projects/tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/projects/66b71e2c20bd1ef99dce0949/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"projects",
+						"66b71e2c20bd1ef99dce0949",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
